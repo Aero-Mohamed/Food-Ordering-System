@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d641017-8a84-4f68-9c0e-9afe50d98606" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/common-domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/BaseId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/OrderId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-domain-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -46,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "E:/java-workspace/Food-Ordering-System/order-service/order-application",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1771735990492</updated>
-      <workItem from="1771735991726" duration="3392000" />
+      <workItem from="1771735991726" duration="4413000" />
     </task>
     <servers />
   </component>
