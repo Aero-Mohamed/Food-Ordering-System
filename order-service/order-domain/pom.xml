@@ -5,18 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.food</groupId>
-        <artifactId>Food-Ordering-System</artifactId>
+        <artifactId>order-service</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>order-service</artifactId>
+    <artifactId>order-domain</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>order-domain</module>
-        <module>order-application</module>
-        <module>order-data</module>
-        <module>order-messaging</module>
-        <module>order-container</module>
+        <module>order-domain-core</module>
+        <module>order-application-service</module>
     </modules>
 
     <properties>
