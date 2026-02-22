@@ -14,4 +14,26 @@
     <properties>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.food</groupId>
+            <artifactId>order-application</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food</groupId>
+            <artifactId>order-data</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food</groupId>
+            <artifactId>order-application-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food</groupId>
+            <artifactId>order-domain-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.food</groupId>
+            <artifactId>order-messaging</artifactId>
+        </dependency>
+    </dependencies>
 </project>
