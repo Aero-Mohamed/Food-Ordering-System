@@ -7,6 +7,8 @@ import java.util.Objects;
 public class Money {
     private final BigDecimal amount;
 
+    public static final Money ZERO = new Money(BigDecimal.ZERO);
+
     public Money(BigDecimal amount) {
         this.amount = amount;
     }
@@ -31,8 +33,8 @@ public class Money {
         return new Money(setScale(amount.subtract(money.getAmount())));
     }
 
-    public Money multiply(BigDecimal value) {
-        return new Money(setScale(amount.multiply(value)));
+    public Money multiply(int value) {
+        return new Money(setScale(amount.multiply(BigDecimal.valueOf(value))));
     }
 
     @Override

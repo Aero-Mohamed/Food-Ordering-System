@@ -2,10 +2,13 @@ package com.food.order.service.domain.entity;
 
 import com.food.domain.entity.AggregateRoot;
 import com.food.domain.valueobject.*;
+import com.food.order.service.domain.exception.OrderDomainException;
+import com.food.order.service.domain.valueobject.OrderItemId;
 import com.food.order.service.domain.valueobject.StreetAddress;
 import com.food.order.service.domain.valueobject.TrackingId;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Order extends AggregateRoot<OrderId> {
     private final CustomerId customerId;
@@ -15,8 +18,59 @@ public class Order extends AggregateRoot<OrderId> {
     private final List<OrderItem> items;
 
     private TrackingId trackingId;
-    private OrderStatus status;
+    private OrderStatus orderStatus;
     private List<String> failureMessages;
+
+    public void initializeOrder() {
+        setId(new OrderId(UUID.randomUUID()));
+        trackingId = new TrackingId(UUID.randomUUID());
+        orderStatus = OrderStatus.PENDING;
+        initializeOrderItems();
+    }
+
+    public void validateOrder() {
+        validateInitialOrder();
+        validateTotalPrice();
+        validateItemsPrice();
+    }
+
+    private void validateItemsPrice() {
+        Money orderItemsTotal = items.stream().map(orderItem -> {
+            validateItemPrice(orderItem);
+            return orderItem.getSubTotal();
+        }).reduce(Money.ZERO, Money::add);
+
+        if(!price.equals(orderItemsTotal)){
+            throw new OrderDomainException("Total price: " + orderItemsTotal.getAmount() + " is not equal to order price: " + price.getAmount());
+        }
+    }
+
+    private void validateItemPrice(OrderItem orderItem) {
+        if(!orderItem.isPriceValid()){
+            throw new OrderDomainException("Order item price: " + orderItem.getPrice().getAmount() +
+                    " is not valid for product: " + orderItem.getProduct().getId().getValue());
+        }
+    }
+
+
+    private void validateTotalPrice() {
+        if (price == null || !price.isGreaterThanZero()){
+            throw new OrderDomainException("Order total price is not valid");
+        }
+    }
+
+    private void validateInitialOrder() {
+        if(orderStatus != null || getId() != null) {
+            throw new OrderDomainException("Order is not in correct state for initialization");
+        }
+    }
+
+    private void initializeOrderItems() {
+        long itemId = 1;
+        for (OrderItem orderItem: items) {
+            orderItem.initializeOrderItem(super.getId(), new OrderItemId(itemId++));
+        }
+    }
 
     private Order(Builder builder) {
         super.setId(builder.orderId);
@@ -26,7 +80,7 @@ public class Order extends AggregateRoot<OrderId> {
         price = builder.price;
         items = builder.items;
         trackingId = builder.trackingId;
-        status = builder.status;
+        orderStatus = builder.orderStatus;
         failureMessages = builder.failureMessages;
     }
 
@@ -58,8 +112,8 @@ public class Order extends AggregateRoot<OrderId> {
         return trackingId;
     }
 
-    public OrderStatus getStatus() {
-        return status;
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
     }
 
     public List<String> getFailureMessages() {
@@ -75,7 +129,7 @@ public class Order extends AggregateRoot<OrderId> {
         private Money price;
         private List<OrderItem> items;
         private TrackingId trackingId;
-        private OrderStatus status;
+        private OrderStatus orderStatus;
         private List<String> failureMessages;
 
         private Builder() {
@@ -116,8 +170,8 @@ public class Order extends AggregateRoot<OrderId> {
             return this;
         }
 
-        public Builder status(OrderStatus val) {
-            status = val;
+        public Builder orderStatus(OrderStatus val) {
+            orderStatus = val;
             return this;
         }
 
