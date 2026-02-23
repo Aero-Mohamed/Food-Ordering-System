@@ -34,6 +34,46 @@ public class Order extends AggregateRoot<OrderId> {
         validateItemsPrice();
     }
 
+    public void pay() {
+        if (orderStatus != OrderStatus.PENDING) {
+            throw new OrderDomainException("Order is not in pending state");
+        }
+        orderStatus = OrderStatus.PAID;
+    }
+
+    public void approve() {
+        if (orderStatus != OrderStatus.PAID) {
+            throw new OrderDomainException("Order is not in paid state");
+        }
+        orderStatus = OrderStatus.APPROVED;
+    }
+
+    public void initCancel(List<String> failureMessages) {
+        if(orderStatus != OrderStatus.PAID) {
+            throw new OrderDomainException("Order is not in paid state");
+        }
+        orderStatus = OrderStatus.CANCELLING;
+        updateFailureMessages(failureMessages);
+    }
+
+    public void cancel(List<String> failureMessages) {
+        if(!(orderStatus == OrderStatus.CANCELLING || orderStatus == OrderStatus.PENDING)) {
+            throw new OrderDomainException("Order is not in cancelling or pending state");
+        }
+        orderStatus = OrderStatus.CANCELLED;
+        updateFailureMessages(failureMessages);
+    }
+
+    private void updateFailureMessages(List<String> messages) {
+        if(this.failureMessages != null && messages != null){
+            this.failureMessages.addAll(messages.stream().filter(msg -> !msg.isEmpty()).toList());
+        }
+
+        if(this.failureMessages == null) {
+            this.failureMessages = messages;
+        }
+    }
+
     private void validateItemsPrice() {
         Money orderItemsTotal = items.stream().map(orderItem -> {
             validateItemPrice(orderItem);
