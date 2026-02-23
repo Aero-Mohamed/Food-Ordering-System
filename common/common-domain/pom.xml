@@ -7,7 +7,6 @@
         <groupId>com.food</groupId>
         <artifactId>Food-Ordering-System</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>common-domain</artifactId>

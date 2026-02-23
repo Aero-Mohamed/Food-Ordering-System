@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d641017-8a84-4f68-9c0e-9afe50d98606" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/BaseId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common-domain/src/main/java/com/food/domain/valueobject/OrderId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,15 +20,16 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3A0ifJklTRENpO4RkwWCpEf61qz" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -46,6 +47,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "develop",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "E:/java-workspace/Food-Ordering-System/order-service/order-application",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,7 +81,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1771735990492</updated>
-      <workItem from="1771735991726" duration="4413000" />
+      <workItem from="1771735991726" duration="4505000" />
+      <workItem from="1771819119817" duration="569000" />
     </task>
     <servers />
   </component>
