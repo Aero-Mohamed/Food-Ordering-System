@@ -4,4 +4,7 @@ import com.food.domain.entity.AggregateRoot;
 import com.food.domain.valueobject.CustomerId;
 
 public class Customer extends AggregateRoot<CustomerId> {
+    public Customer(CustomerId customerId) {
+        super.setId(customerId);
+    }
 }
