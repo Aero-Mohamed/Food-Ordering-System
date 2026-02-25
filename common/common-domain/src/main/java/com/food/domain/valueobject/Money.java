@@ -40,7 +40,7 @@ public class Money {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Money money)) return false;
-        return Objects.equals(amount, money.amount);
+        return Objects.equals(setScale(amount), setScale(money.amount));
     }
 
     @Override
