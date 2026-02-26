@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d641017-8a84-4f68-9c0e-9afe50d98606" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/com/food/order/service/domain/OrderApplicationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/test/java/com/food/order/service/domain/OrderApplicationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +59,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.OrderApplicationServiceTest.executor": "Run",
     "JUnit.OrderApplicationServiceTest.testCreateOrder.executor": "Run",
     "JUnit.OrderApplicationServiceTest.testCreateOrderWithPassiveRestaurant.executor": "Run",
     "JUnit.OrderApplicationServiceTest.testCreateOrderWithWrongProductPrice.executor": "Run",
     "JUnit.OrderApplicationServiceTest.testCreateOrderWrongPrice.executor": "Run",
+    "JUnit.domain in order-application-service.executor": "Coverage",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -90,6 +96,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java-workspace\Food-Ordering-System\order-service\order-application" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java-workspace\Food-Ordering-System\infrastructure\docker-compose\volumes\zookeeper" />
+      <recent name="E:\java-workspace\Food-Ordering-System\infrastructure\docker-compose" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.food.order.service.domain.ports.output.message.publisher.payment" />
@@ -199,7 +209,7 @@
       <workItem from="1771995546470" duration="419000" />
       <workItem from="1772002961977" duration="661000" />
       <workItem from="1772006682600" duration="570000" />
-      <workItem from="1772075473859" duration="1838000" />
+      <workItem from="1772075473859" duration="5424000" />
     </task>
     <servers />
   </component>
@@ -221,5 +231,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Food_Ordering_System$domain_in_order_application_service.ic" NAME="domain in order-application-service Coverage Results" MODIFIED="1772077441038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
