@@ -8,6 +8,7 @@ import com.food.order.service.domain.entity.Customer;
 import com.food.order.service.domain.entity.Order;
 import com.food.order.service.domain.entity.Product;
 import com.food.order.service.domain.entity.Restaurant;
+import com.food.order.service.domain.exception.OrderDomainException;
 import com.food.order.service.domain.mapper.OrderDataMapper;
 import com.food.order.service.domain.ports.input.service.OrderApplicationService;
 import com.food.order.service.domain.ports.output.repository.CustomerRepository;
@@ -160,5 +161,40 @@ public class OrderApplicationServiceTest {
         assertNotNull(createOrderResponse.getOrderTrackingId());
     }
 
+    @Test
+    public void testCreateOrderWrongPrice() {
+        var orderDomainException = assertThrows(OrderDomainException.class,
+                () -> orderApplicationService.createOrder(createOrderCommandWrongPrice));
+
+        assertEquals("Total price: 200.00 is not equal to order price: 250.00",
+                orderDomainException.getMessage());
+    }
+
+    @Test
+    public void testCreateOrderWithWrongProductPrice() {
+        var orderDomainException = assertThrows(OrderDomainException.class,
+                () -> orderApplicationService.createOrder(createOrderCommandWrongProductPrice));
+        assertEquals("Order item price: 60.00 is not valid for product: " + PRODUCT_ID,
+                orderDomainException.getMessage());
+    }
+
+    @Test
+    public void testCreateOrderWithPassiveRestaurant() {
+        var restaurantRes = Restaurant.builder()
+                .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
+                .products(List.of(
+                        new Product(new ProductId(PRODUCT_ID), "product-1", new Money(new BigDecimal("50.00"))),
+                        new Product(new ProductId(PRODUCT_ID), "product-2", new Money(new BigDecimal("50.00")))))
+                .active(false)
+                .build();
+        when(restaurantRepository.findRestaurantInformation(orderDataMapper.createOrderCommandToRestaurant(createOrderCommand)))
+                .thenReturn(Optional.of(restaurantRes));
+
+        var orderDomainException = assertThrows(OrderDomainException.class,
+                () -> orderApplicationService.createOrder(createOrderCommand));
+
+        assertEquals("Restaurant with id: "+ RESTAURANT_ID +" is not active",
+                orderDomainException.getMessage());
+    }
 
 }
