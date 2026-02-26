@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d641017-8a84-4f68-9c0e-9afe50d98606" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/kafka/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaConfigData.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaConfigData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaConsumerConfigData.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaConsumerConfigData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaProducerConfigData.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-config-data/src/main/java/com/food/kafka/config/data/KafkaProducerConfigData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,6 +105,7 @@
       <recent name="E:\java-workspace\Food-Ordering-System\order-service\order-application" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\java-workspace\Food-Ordering-System\infrastructure\kafka\kafka-config-data\src\main\java\com\food\kafka\config\data" />
       <recent name="E:\java-workspace\Food-Ordering-System\infrastructure\docker-compose\volumes\zookeeper" />
       <recent name="E:\java-workspace\Food-Ordering-System\infrastructure\docker-compose" />
     </key>
@@ -209,7 +217,7 @@
       <workItem from="1771995546470" duration="419000" />
       <workItem from="1772002961977" duration="661000" />
       <workItem from="1772006682600" duration="570000" />
-      <workItem from="1772075473859" duration="5424000" />
+      <workItem from="1772075473859" duration="6867000" />
     </task>
     <servers />
   </component>

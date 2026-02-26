@@ -25,6 +25,9 @@
     <properties>
         <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <mockito.version>5.17.0</mockito.version>
+        <spring-kafka.version>4.0.3</spring-kafka.version>
+        <kafka-avro-serializer.version>8.1.0</kafka-avro-serializer.version>
+        <avro.version>1.12.0</avro.version>
     </properties>
 
     <dependencyManagement>
@@ -64,7 +67,26 @@
                 <artifactId>common-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.food</groupId>
+                <artifactId>kafka-producer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food</groupId>
+                <artifactId>kafka-consumer</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food</groupId>
+                <artifactId>kafka-model</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.food</groupId>
+                <artifactId>kafka-config-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
