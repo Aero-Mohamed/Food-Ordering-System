@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d641017-8a84-4f68-9c0e-9afe50d98606" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-producer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/kafka/kafka-consumer/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +210,7 @@
       <workItem from="1772002961977" duration="661000" />
       <workItem from="1772006682600" duration="570000" />
       <workItem from="1772075473859" duration="7543000" />
-      <workItem from="1772163975809" duration="2831000" />
+      <workItem from="1772163975809" duration="3277000" />
     </task>
     <servers />
   </component>
